@@ -27,7 +27,7 @@ namespace TameMyCerts.Validators;
 /// <summary>
 ///     This validator is for static entries that shall be put into issued certificates.
 /// </summary>
-internal class CertificateContentValidator
+internal sealed class CertificateContentValidator
 {
     private const StringComparison Comparison = StringComparison.InvariantCultureIgnoreCase;
     private static readonly Regex IsValidOid = new("^([0-2])((\\.0)|(\\.[1-9][0-9]*))*$");

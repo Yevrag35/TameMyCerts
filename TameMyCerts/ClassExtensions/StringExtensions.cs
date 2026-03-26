@@ -16,9 +16,9 @@ using System.Text.RegularExpressions;
 
 namespace TameMyCerts.ClassExtensions;
 
-public static class StringExtensions
+internal static class StringExtensions
 {
-    public static string ReplaceCaseInsensitive(this string input, string from, string to)
+    internal static string ReplaceCaseInsensitive(this string input, string from, string to)
     {
         return Regex.Replace(input, from, to, RegexOptions.IgnoreCase);
     }

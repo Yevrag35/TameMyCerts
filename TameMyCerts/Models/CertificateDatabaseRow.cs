@@ -24,7 +24,7 @@ using TameMyCerts.X509;
 
 namespace TameMyCerts.Models;
 
-internal class CertificateDatabaseRow
+internal sealed class CertificateDatabaseRow
 {
     public CertificateDatabaseRow(CCertServerPolicy serverPolicy)
     {

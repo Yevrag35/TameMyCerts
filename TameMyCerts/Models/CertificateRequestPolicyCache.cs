@@ -20,7 +20,7 @@ using System.Threading;
 
 namespace TameMyCerts.Models;
 
-internal class CertificateRequestPolicyCache
+internal sealed class CertificateRequestPolicyCache
 {
     private readonly Dictionary<string, CertificateRequestPolicyCacheEntry> _cache = new();
     private readonly Lock _lockObject = new();

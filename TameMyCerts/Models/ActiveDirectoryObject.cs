@@ -24,7 +24,7 @@ using TameMyCerts.Enums;
 
 namespace TameMyCerts.Models;
 
-internal class ActiveDirectoryObject
+internal sealed class ActiveDirectoryObject
 {
     private const StringComparison Comparison = StringComparison.InvariantCultureIgnoreCase;
     private static readonly TimeSpan LdapClientTimeout = new(0, 0, 15);

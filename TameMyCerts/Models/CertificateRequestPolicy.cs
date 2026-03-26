@@ -24,7 +24,7 @@ namespace TameMyCerts.Models;
 
 // Must be public due to XML serialization, otherwise 0x80131509 / System.InvalidOperationException
 [XmlRoot(ElementName = "CertificateRequestPolicy")]
-public class CertificateRequestPolicy
+public sealed class CertificateRequestPolicy
 {
     [XmlElement(ElementName = "AuditOnly")]
     public bool AuditOnly { get; set; }

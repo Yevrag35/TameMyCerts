@@ -25,7 +25,7 @@ namespace TameMyCerts.Validators;
 /// <summary>
 ///     This validator is for everything that depends on binding a requested identity to an Active Directory object.
 /// </summary>
-internal class DirectoryServiceValidator
+internal sealed class DirectoryServiceValidator
 {
     private const StringComparison Comparison = StringComparison.InvariantCultureIgnoreCase;
     private readonly string _forestRootDomain;

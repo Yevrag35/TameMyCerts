@@ -18,7 +18,7 @@ using System.Formats.Asn1;
 
 namespace TameMyCerts.X509;
 
-public class X509CertificateExtensionCrlDistributionPoint : X509CertificateExtension
+public sealed class X509CertificateExtensionCrlDistributionPoint : X509CertificateExtension
 {
     private readonly List<Uri> _uris = [];
 

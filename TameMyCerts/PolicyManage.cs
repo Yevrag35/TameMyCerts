@@ -22,7 +22,7 @@ namespace TameMyCerts;
 [ClassInterface(ClassInterfaceType.None)]
 [ProgId("TameMyCerts.PolicyManage")]
 [Guid("f24389a5-97a6-40c1-a1c6-aefd273fb634")] // must be distinct from Policy Class
-public class PolicyManage : CCertManagePolicyModule
+public sealed class PolicyManage : CCertManagePolicyModule
 {
     #region ICertManageModule Members
 

@@ -20,7 +20,7 @@ using TameMyCerts.Enums;
 
 namespace TameMyCerts.X509;
 
-public class X509CertificateExtensionSecurityIdentifier : X509CertificateExtension
+public sealed class X509CertificateExtensionSecurityIdentifier : X509CertificateExtension
 {
     /// <summary>
     ///     Creates a new X509 extension containing the SID as a string.

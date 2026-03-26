@@ -22,7 +22,7 @@ using TameMyCerts.Models;
 
 namespace TameMyCerts.X509;
 
-public class X509CertificateExtensionSubjectAlternativeName : X509CertificateExtension
+public sealed class X509CertificateExtensionSubjectAlternativeName : X509CertificateExtension
 {
     /// <summary>
     ///     An indicator if the extension was modified. If not, it returns the un-changed RawData.

@@ -24,7 +24,7 @@ namespace TameMyCerts.Validators;
 ///     This validator is for everything that concerns request attributes and is independent of any certificate request
 ///     policy.
 /// </summary>
-internal class RequestAttributeValidator
+internal sealed class RequestAttributeValidator
 {
     private const string DATETIME_RFC2616 = "ddd, d MMM yyyy HH:mm:ss 'GMT'";
 

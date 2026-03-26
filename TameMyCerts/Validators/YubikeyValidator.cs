@@ -25,7 +25,7 @@ namespace TameMyCerts.Validators;
 /// <summary>
 ///     This validator will check that the CSR is issued by a real Yubikey
 /// </summary>
-internal class YubikeyValidator
+internal sealed class YubikeyValidator
 {
     private const string RootCaStoreName = "YKROOT";
     private const string IntermediateCaStoreName = "YKCA";

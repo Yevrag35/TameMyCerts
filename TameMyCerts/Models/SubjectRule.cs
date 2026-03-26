@@ -19,7 +19,7 @@ namespace TameMyCerts.Models;
 
 // Must be public due to XML serialization, otherwise 0x80131509 / System.InvalidOperationException
 [XmlRoot(ElementName = "SubjectRule")]
-public class SubjectRule
+public sealed class SubjectRule
 {
     [XmlElement(ElementName = "Field")] 
     public string Field { get; set; } = string.Empty;

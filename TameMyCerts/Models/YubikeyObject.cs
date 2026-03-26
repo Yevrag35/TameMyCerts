@@ -29,7 +29,7 @@ namespace TameMyCerts.Models;
 
 // Must be public due to XML serialization, otherwise 0x80131509 / System.InvalidOperationException
 [XmlRoot(ElementName = "YubiKeyObject")]
-public class YubikeyObject
+public sealed class YubikeyObject
 {
     private readonly Regex _slotRegex = new(@"CN=YubiKey PIV Attestation (?<slot>[0-9A-Fa-f]{2})");
 

@@ -24,7 +24,7 @@ namespace TameMyCerts.Validators;
 /// <summary>
 ///     This validator is for everything concerning the original certificate request.
 /// </summary>
-internal class CertificateRequestValidator
+internal sealed class CertificateRequestValidator
 {
     private const StringComparison Comparison = StringComparison.InvariantCultureIgnoreCase;
 

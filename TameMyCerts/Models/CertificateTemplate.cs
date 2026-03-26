@@ -16,7 +16,7 @@ using TameMyCerts.Enums;
 
 namespace TameMyCerts.Models;
 
-internal record CertificateTemplate
+internal sealed record CertificateTemplate
 {
     public CertificateTemplate(string name, bool enrolleeSuppliesSubject, KeyAlgorithmType keyAlgorithm,
         bool userScope = false, string oid = null)

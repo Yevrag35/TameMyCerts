@@ -21,7 +21,7 @@ using TameMyCerts.Enums;
 
 namespace TameMyCerts.Models;
 
-internal class CertificateAuthorityConfiguration
+internal sealed class CertificateAuthorityConfiguration
 {
     private const string CONFIG_ROOT =
         "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\CertSvc\\Configuration";

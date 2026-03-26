@@ -24,7 +24,7 @@ namespace TameMyCerts.Models;
 ///     This class contains all necessary information that must be tracked during request validation. Imagine it as a batch
 ///     card. Its content may get modified by the validator classes.
 /// </summary>
-internal class CertificateRequestValidationResult
+internal sealed class CertificateRequestValidationResult
 {
     private readonly Dictionary<string, byte[]> _certificateExtensions = new();
 

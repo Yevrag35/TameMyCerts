@@ -21,7 +21,7 @@ namespace TameMyCerts;
 // This needs to be named Company-Product-Component, it is hardcoded into EventViewer.
 public sealed class ETWLogger : EventSource
 {
-    public static ETWLogger Log = new();
+    public static readonly ETWLogger Log = new();
 
     public static class Tasks
     {
@@ -29,7 +29,6 @@ public sealed class ETWLogger : EventSource
         public const EventTask TameMyCerts = (EventTask)2;
         public const EventTask YubikeyValidator = (EventTask)10;
         public const EventTask XMLParser = (EventTask)11;
-        public const EventTask FileSystemStorer = (EventTask)12;
         public const EventTask CertificateContentValidator = (EventTask)13;
     }
 

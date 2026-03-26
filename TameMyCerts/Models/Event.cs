@@ -17,7 +17,7 @@ using TameMyCerts.Enums;
 
 namespace TameMyCerts.Models;
 
-internal class Event
+internal sealed class Event
 {
     public int Id { get; set; }
     public int LogLevel { get; set; } = CertSrv.CERTLOG_WARNING;

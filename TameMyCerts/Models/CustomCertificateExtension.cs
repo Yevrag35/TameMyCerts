@@ -16,7 +16,7 @@ using System.Xml.Serialization;
 
 namespace TameMyCerts.Models;
 
-public class CustomCertificateExtension
+public sealed class CustomCertificateExtension
 {
     [XmlElement(ElementName = "Oid")] public string Oid { get; set; }
 

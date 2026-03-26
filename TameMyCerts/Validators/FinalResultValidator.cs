@@ -19,7 +19,7 @@ using TameMyCerts.Models;
 
 namespace TameMyCerts.Validators;
 
-internal class FinalResultValidator
+internal sealed class FinalResultValidator
 {
     public CertificateRequestValidationResult VerifyRequest(CertificateRequestValidationResult result,
         CertificateRequestPolicy policy, CertificateDatabaseRow dbRow)

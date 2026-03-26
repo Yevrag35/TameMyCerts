@@ -20,7 +20,7 @@ namespace TameMyCerts.Models;
 
 // Must be public due to XML serialization, otherwise 0x80131509 / System.InvalidOperationException
 [XmlRoot(ElementName = "DirectoryServicesMapping")]
-public class DirectoryServicesMapping
+public sealed class DirectoryServicesMapping
 {
     [XmlElement(ElementName = "Action")]
     public DsMappingPolicyAction Action { get; set; } = DsMappingPolicyAction.ALLOW;

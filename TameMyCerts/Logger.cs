@@ -19,7 +19,7 @@ using TameMyCerts.Models;
 
 namespace TameMyCerts;
 
-internal class Logger
+internal sealed class Logger
 {
     private readonly EventLog _eventLog;
     private readonly int _logLevel;

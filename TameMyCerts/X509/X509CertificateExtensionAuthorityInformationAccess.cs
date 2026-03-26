@@ -19,7 +19,7 @@ using TameMyCerts.Enums;
 
 namespace TameMyCerts.X509;
 
-public class X509CertificateExtensionAuthorityInformationAccess : X509CertificateExtension
+public sealed class X509CertificateExtensionAuthorityInformationAccess : X509CertificateExtension
 {
     private readonly List<KeyValuePair<Uri, bool>> _uris = [];
 

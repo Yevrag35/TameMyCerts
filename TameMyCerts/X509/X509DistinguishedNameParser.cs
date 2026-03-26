@@ -19,12 +19,12 @@ using TameMyCerts.Models;
 
 namespace TameMyCerts.X509;
 
-public static class X509DistinguishedNameParser
+internal static class X509DistinguishedNameParser
 {
     /// <summary>
     ///     Parses an ASN.1 encoded X.509 Subject Distinguished Name.
     /// </summary>
-    public static List<KeyValuePair<string, string>> Parse(byte[] encodedSubjectDn)
+    internal static List<KeyValuePair<string, string>> Parse(byte[] encodedSubjectDn)
     {
         var result = new List<KeyValuePair<string, string>>();
 

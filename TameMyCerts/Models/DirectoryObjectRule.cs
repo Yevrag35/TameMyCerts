@@ -19,7 +19,7 @@ namespace TameMyCerts.Models;
 
 // Must be public due to XML serialization, otherwise 0x80131509 / System.InvalidOperationException
 [XmlRoot(ElementName = "DirectoryObjectRule")]
-public class DirectoryObjectRule
+public sealed class DirectoryObjectRule
 {
     [XmlElement(ElementName = "DirectoryServicesAttribute")]
     public string DirectoryServicesAttribute { get; set; } = "sAMAccountName";
