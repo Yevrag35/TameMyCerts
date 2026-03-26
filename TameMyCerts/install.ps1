@@ -23,7 +23,7 @@ param(
     $Uninstall
 )
 
-$ErrorActionPreference = $Stop
+$ErrorActionPreference = 'Stop'
 
 function Copy-Registry {
 

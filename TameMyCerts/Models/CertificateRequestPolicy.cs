@@ -89,6 +89,10 @@ public class CertificateRequestPolicy
     [XmlElement(ElementName = "SupplementDnsNames")]
     public bool SupplementDnsNames { get; set; }
 
+    [XmlArray(ElementName = "AdditionalDnsNames")]
+    [XmlArrayItem(ElementName = "string")]
+    public List<string> AdditionalDnsNames { get; set; } = new();
+
     [XmlElement(ElementName = "SupplementUnqualifiedNames")]
     public bool SupplementUnqualifiedNames { get; set; } = true;
 

@@ -256,6 +256,15 @@ internal class CertificateRequestValidator
             #endregion
         }
 
+        #region Add static DNS SAN entries from policy
+
+        foreach (var dnsName in policy.AdditionalDnsNames)
+        {
+            result.SubjectAlternativeNameExtension.AddDnsName(dnsName);
+        }
+
+        #endregion
+
         #region Set fixed expiration time
 
         result.SetNotAfter(policy.NotAfter);
