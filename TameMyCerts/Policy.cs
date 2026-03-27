@@ -18,6 +18,7 @@ using System.Reflection;
 using System.Runtime.InteropServices;
 using CERTCLILib;
 using CERTPOLICYLib;
+using Microsoft.Win32;
 using TameMyCerts.ClassExtensions;
 using TameMyCerts.Enums;
 using TameMyCerts.Models;
@@ -59,6 +60,25 @@ public sealed class Policy : ICertPolicy2
     }
 
     #endregion
+
+    [ComRegisterFunction]
+    private static void Register(Type type)
+    {
+        using RegistryKey inproc = Registry.ClassesRoot.CreateSubKey($@"CLSID\{{{type.GUID}}}\InprocServer32");
+        if (inproc is null)
+        {
+            throw new InvalidOperationException("Failed to open COM registration key.");
+        }
+
+        inproc.SetValue("ThreadingModel", "Free", RegistryValueKind.String);
+    }
+    [ComUnregisterFunction]
+    private static void Unregister(Type type)
+    {
+        using RegistryKey inproc = Registry.ClassesRoot.OpenSubKey($@"CLSID\{{{type.GUID}}}\InprocServer32", writable: true);
+
+        inproc?.DeleteValue("ThreadingModel", throwOnMissingValue: false);
+    }
 
     #region ICertPolicy2 Members
 
